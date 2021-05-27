@@ -28,6 +28,8 @@ public class Frag1 extends Fragment {
         });
         // Inflate the layout for this fragment
 
+        setHasOptionsMenu(true);
+
         return inflater.inflate(R.layout.fragment_frag1, container, false);
     }
 }
