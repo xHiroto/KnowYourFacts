@@ -24,7 +24,7 @@ public class Frag1 extends Fragment {
         btnChangeColor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getView().setBackgroundColor(Color.parseColor("#BFDBFF"));
+                view.setBackgroundColor(Color.parseColor("#BFDBFF"));
             }
         });
         // Inflate the layout for this fragment
