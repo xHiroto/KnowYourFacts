@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll2"
+    tools:context=".Frag2">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/frag2TV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Honey is the only food that does not spoil.
+        \nHoney found in the tombs of Egyptian pharaohs
+        \nhas been tasted by archaeologists and found edible." />
+
+    <Button
+        android:id="@+id/changeColorBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Colour" />
+
+</LinearLayout>

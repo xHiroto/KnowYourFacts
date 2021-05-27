@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         al = new ArrayList<Fragment>();
         al.add(new Frag1());
+        al.add(new Frag2());
         al.add(new Frag3());
 
         adapter = new MyFragmentPagerAdapter(fm, al);
