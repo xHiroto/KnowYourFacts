@@ -11,10 +11,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="The word 'queue' is the only word in the English language that is still pronounced the same way when the last four letters are removed.
-Beetles taste like apples, wasps like pine nuts, and worms  like fried bacon.
-
-Of all the words in the English language, the word 'set' has the most definitions!" />
+        android:text="The placement of a donkey's eyes in its' heads enables it to see all four feet at all times! \n\nThe six official languages of the United Nations are: English, French, Arabic, Chinese, Russian and Spanish. \n\n
+Earth is the only planet not named after a god." />
 
     <Button
         android:id="@+id/btnChangeColor"
