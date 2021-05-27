@@ -4,8 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceManager;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -90,4 +93,19 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+    protected void onPause(){
+        super.onPause();
+        Integer fragNum = vPager.getCurrentItem();
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor prefEdit = pref.edit();
+        prefEdit.putInt("FragmentNo", fragNum);
+        prefEdit.commit();
+    }
+    protected void onResume(){
+        super.onResume();
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+        Integer fragNo = pref.getInt("FragmentNo", 0);
+        vPager.setCurrentItem(fragNo, true);
+    }
+
 }
