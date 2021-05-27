@@ -75,20 +75,24 @@ public class Frag3 extends Fragment {
         tvFacts = view.findViewById(R.id.Frag3tv);
         btnChangeColor = view.findViewById(R.id.Frag3btn);
 
-        // create object of Random class
-        Random obj = new Random();
-        int rand_num = obj.nextInt(0xffffff + 1);
-
-        // format it as hexadecimal string and print
-        String colorCode = String.format("#%06x", rand_num);
-
-
-
         tvFacts.setText("Coca-Cola would be green if colouring weren’t added to it. \n\n Earth is the only planet not named after a god \n\n  It is impossible to sneeze with your eyes open");
+
+
+
+
+
+
 
         btnChangeColor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // create object of Random class
+                Random obj = new Random();
+                int rand_num = obj.nextInt(0xffffff + 1);
+
+                // format it as hexadecimal string and print
+                String colorCode = String.format("#%06x", rand_num);
+
                 ll.setBackgroundColor(Color.parseColor(colorCode));
             }
         });
