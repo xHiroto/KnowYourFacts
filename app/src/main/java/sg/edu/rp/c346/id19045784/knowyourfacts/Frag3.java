@@ -9,8 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import org.w3c.dom.Text;
 
@@ -25,6 +28,7 @@ public class Frag3 extends Fragment {
     LinearLayout ll;
     TextView tvFacts;
     Button btnChangeColor;
+    ImageView iv;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -74,13 +78,11 @@ public class Frag3 extends Fragment {
         ll = view.findViewById(R.id.Frag3Layout);
         tvFacts = view.findViewById(R.id.Frag3tv);
         btnChangeColor = view.findViewById(R.id.Frag3btn);
+        iv = view.findViewById(R.id.Frag3Image);
 
         tvFacts.setText("Coca-Cola would be green if colouring weren’t added to it. \n\n Earth is the only planet not named after a god \n\n  It is impossible to sneeze with your eyes open");
-
-
-
-
-
+        String imageUrl = "https://wtffunfact.com/wp-content/uploads/2021/05/WTF-Fun-Fact-Whats-At-The-Center-Of-A-Snowflake_.png";
+        Picasso.with(getActivity()).load(imageUrl).into(iv);
 
 
         btnChangeColor.setOnClickListener(new View.OnClickListener() {

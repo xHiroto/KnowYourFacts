@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             if (vPager.getCurrentItem() < max - 1) {
                 int nextPage = vPager.getCurrentItem() + 1;
                 vPager.setCurrentItem(nextPage, true);
-                return true;
+
 
             }
 
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
             if (vPager.getCurrentItem() > 0) {
                 int previousPage = vPager.getCurrentItem() - 1;
                 vPager.setCurrentItem(previousPage, true);
-                return true;
+
             }
 
         }
@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
             int max = vPager.getChildCount();
             int pick = rand.nextInt(max);
             vPager.setCurrentItem(pick,true);
-            return true;
+
         }
         return super.onOptionsItemSelected(item);
     }
