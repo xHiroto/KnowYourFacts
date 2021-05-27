@@ -24,13 +24,22 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Fragment> al;
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btnReadLtr = findViewById(R.id.btnReadLtr);
+        vPager = findViewById(R.id.viewpager1);
+
+        FragmentManager fm = getSupportFragmentManager();
+
+        al = new ArrayList<Fragment>();
+        al.add(new Frag1());
+        al.add(new Frag3());
+
+        adapter = new MyFragmentPagerAdapter(fm, al);
+
+        vPager.setAdapter(adapter);
 
         btnReadLtr.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,8 +47,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
 
 
     }
